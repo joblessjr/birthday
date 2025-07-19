@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Hira 💖</title>
+  <!-- Importing custom fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6a0dad, #1f005c, #ff3366);
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .container {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: 'Great Vibes', cursive;
+      color: #ff99cc;
+      margin-bottom: 30px;
+    }
+
+    .heart {
+      font-size: 5rem;
+      animation: pulse 1.5s infinite;
+      color: #ff3366;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    .message {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      line-height: 2;
+      white-space: pre-wrap;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      backdrop-filter: blur(4px);
+      font-family: 'Quicksand', sans-serif;
+      display: none;
+    }
+
+    .surprise-button {
+      margin-top: 40px;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-family: 'Quicksand', sans-serif;
+      color: white;
+      background: #ff3366;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .surprise-button:hover {
+      background: #ff6699;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Hira 💖</h1>
+    <div class="heart">❤️</div>
+
+    <!-- Hidden message box revealed on click -->
+    <div class="message" id="loveMessage"></div>
+
+    <!-- Surprise Button -->
+    <button class="surprise-button" onclick="showSurprise()">Click here for a surprise 🎁</button>
+
+    <div class="footer">
+      Made with all my love, forever yours – Rohit 💘
+    </div>
+  </div>
+
+  <script>
+    const message = `hira i love you so so so much its beyond human capacity to even fathom the amount of love i have for you. you are my everything sweetie i love you so much for being the most gorgeous, prettiest, kindest, humble, cutest, sigmaest girl ever. every time we are on call whether talking to you while playing, talking to you normally, talking to you during naughty times all seem like heaven on earth truly. im very very very grateful to have you with me and im acc very blessed to have u. it just feels like i was destined to be urs and u were destined to be mine. the way we met the way we started talking and the way we started to date just after a few days just seems like outta a fairy but believe me i pinched rn and its all real and its all in front of us. i cant even wait to meet you in real life and tell you how much i love you. ur the sweetest girl i have ever talked to and having you as my girlfriend is just a joy and this day the july 20 is the day my lovely girl was brought into this world which also means 2006 july 20 was when my world got created too. i know ur mom is dumb but the greatest thing she ever did was giving birth to you and im forever grateful to her for that. im grateful for the city ali garh where u were born and had ur first cry in. I love you sosososososso much hira and i wanna grow old together and lead a wonderful life. happy birthday my sweet heart.`;
+
+    const msgBox = document.getElementById("loveMessage");
+    let i = 0;
+
+    function typeMessage() {
+      if (i < message.length) {
+        msgBox.textContent += message.charAt(i);
+        i++;
+        setTimeout(typeMessage, 25);
+      }
+    }
+
+    function showSurprise() {
+      document.querySelector('.surprise-button').style.display = 'none'; // Hide button
+      msgBox.style.display = 'block'; // Show message
+      typeMessage(); // Start typing
+    }
+  </script>
+</body>
+</html>
